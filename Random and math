@@ -1,0 +1,71 @@
+import random
+print('Randint\n')
+print(random.randint(1, 10))
+print('Random\n')
+print(random.random())
+print(random.choice('Python'))
+print(random.random())
+print(random.seed(4))
+
+
+## Number Game
+import random
+playing = True
+Number = random.randint(1, 20)
+guess = int(input("Enter your best guess : "))
+score = 0
+while playing:
+    if Number == guess:
+        score = score + 1
+        print("Score : ", score, "\n")
+        print("You are correct")
+        print("the number is : ",Number)
+        break
+
+    else:
+        print("You are wrong, the number is : ",Number)
+        playing = False
+
+
+import random
+option = ['Rock', 'Paper', 'Scissors']
+computer = random.choice(option)
+user = input("Choose Rock, Paper or scissors : ")
+player_Score = 0
+com_Score = 0
+play = True
+while play:
+    if computer == user:
+        print("Tie")
+        print(f'Plyer score = {player_Score}   and      Computer score = {com_Score}')
+        break
+    elif computer == 'scissors' and user == 'Paper':
+        print("Computer is won")
+        com_Score = com_Score + 1
+        print(f'Plyer score = {player_Score}   and      Computer score = {com_Score}')
+        break
+    elif computer == 'Rock' and user == 'scissors':
+        print("Computer is won")
+        com_Score = com_Score + 1
+        print(f'Plyer score = {player_Score}   and      Computer score = {com_Score}')
+        break
+    elif computer == 'Paper' and user == 'Rock':
+        print("Computer is won")
+        com_Score = com_Score + 1
+        print(f'Plyer score = {player_Score}   and      Computer score = {com_Score}')
+        break
+    else:
+        print("You are won")
+        player_Score = player_Score + 1
+        print(f'Plyer score = {player_Score}   and      Computer score = {com_Score}')
+        break
+
+
+
+import math
+print(math.ceil(23.56))
+print(math.floor(23.56))
+print(math.fabs(-96))
+x = -8
+y = 7
+print(math.copysign(x, y))
